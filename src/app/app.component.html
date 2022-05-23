@@ -1,0 +1,8 @@
+<app-light *ngIf="isOn; else isOff" [lightOn]="lightOn"></app-light>
+<ng-template #isOff>
+  <img src="{{lightOff}}" alt="{{altText}}" class="off" />
+</ng-template>
+<app-night-light [nightLight]="nightLight"></app-night-light>
+<app-switch (lightSwitch)="lightSwitch()"></app-switch>
+
+
